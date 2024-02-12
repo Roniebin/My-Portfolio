@@ -1,10 +1,11 @@
-body{
-  box-sizing: border-box;
+
+@font-face {
+  font-family: 'SOYOMapleBoldTTF';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/SOYOMapleBoldTTF.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
 }
 
-.big-font{
-
-}
 
 p{
   font-weight:500;
@@ -32,26 +33,24 @@ p{
 .Main{
   height:2000px;
   margin:auto;
-  font-family : "sans-serif";
+  box-sizing: border-box;
+  font-family: "SOYOMapleBoldTTF";
 }
 
 .navbar{
   width:100%;
+  max-width:1200px;
   height:50px;
   margin:auto;
   display:flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 1px 1px 1px  grey;
-  margin:1px;
-
 }
 
 .navbar-items{
   width:10%;
-  height:60%;
-  padding-top:5px;
-  margin:auto;
+  height:40%;
+ 
   text-align:center;
 }
 
@@ -68,7 +67,7 @@ p{
 
 .intro{
   width:100%;
-  height:25%;
+  height:27%;
   display:flex;
   justify-content: center;
   align-items: center;
@@ -79,16 +78,18 @@ p{
   background-image:url("./img/배경사진3.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  box-shadow: 1px 1px 1px grey;
 
 }
 
 .intro-box{
   text-align: center;
+  margin-top:40px;
   padding:20px;
 }
 
 .intro-box button{
-  margin-top:30px;
+  margin-top:50px;
 }
 
 .start{
@@ -103,7 +104,97 @@ p{
 
 /* 인트로 바 --------------------------------- */
 
-
 .about{
   text-align:center;
+  width:100%;
+  height:600px;
+  padding:20px;
+  background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("./img/배경사진2.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: top center;
+  color:white;
+
+}
+
+
+.about-container{
+  width:50%;
+  max-width:1000px;
+  height:70%;
+  margin:auto;
+  border: 2px solid #0a5c0a;
+  border-radius:10px;
+  background:white
+}
+
+.about-foward-upstairs{
+  width:100%;
+  height:80%;
+  display:flex;
+  padding-top:10px;
+  color:black;
+  justify-content: center;
+  align-items: center;
+}
+
+.privateInformation{
+  text-align: left;
+  margin-top:15px;
+}
+
+
+.about-foward{
+  width:90%;
+  height:80%;
+  margin:auto;
+}
+
+.about img{
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  margin-top:10px;
+}
+
+
+.about-front{
+  
+}
+
+/* about ------------------- */
+
+
+.skills{
+  width:100%;
+  height:300px;
+  background-color: grey;
+}
+
+
+@media screen and (max-width: 786px) {
+  .about-foward-upstairs{
+    display:block;
+
+  }
+  .about-foward-upstairs p{
+    font-size:12px;
+    margin:15px;
+  } 
+
+  .privateInformation :first-child{
+    margin-top:25px;
+  }
+
+  .about-foward-upstairs img{
+    border-radius: 10px;
+    width:150px;
+    height:150px;
+  }
+
+  .about-foward-upstairs div{
+    margin-left:25px;
+    text-align: left;
+  }
+
 }

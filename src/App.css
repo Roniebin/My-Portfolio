@@ -2,7 +2,29 @@ body{
   box-sizing: border-box;
 }
 
+.big-font{
 
+}
+
+p{
+  font-weight:500;
+}
+
+.btn{
+  width:120px;
+  height:40px;
+  color:white;
+  border:none;
+  border-radius:20px;
+  background-color:#0a5c0a ;
+  color:white;
+  font-weight:600;
+}
+
+.btn:hover{
+  opacity: 0.7;
+  cursor: pointer;
+}
 
 
 /* 기본 셋팅------------------------- */
@@ -21,6 +43,8 @@ body{
   justify-content: center;
   align-items: center;
   box-shadow: 1px 1px 1px  grey;
+  margin:1px;
+
 }
 
 .navbar-items{
@@ -48,15 +72,38 @@ body{
   display:flex;
   justify-content: center;
   align-items: center;
-  
+  background:#FDF5E6;
+  color:#0a5c0a;
+  /* color:white; */
+  /* 배경 출처 :출처 <a href="<a href="https://kr.freepik.com/free-photo/smooth-plain-white-marble-texture_18665597.htm#query=%EC%B1%85%EC%83%81&position=36&from_view=keyword&track=sph&uuid=7b130b0b-1497-4b96-9361-c54f4a60d9df">작가 rawpixel.com</a> 출처 Freepik */
+  background-image:url("./img/배경사진3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
 
 .intro-box{
   text-align: center;
-  box-shadow: 5px 5px 5px grey;
+  padding:20px;
 }
 
-.intro-box img{
-  width:50px;
-  height:50px;
+.intro-box button{
+  margin-top:30px;
+}
+
+.start{
+  opacity: 0;
+}
+
+.end{
+  opacity: 1;
+  transition : opacity 1s;
+}
+
+
+/* 인트로 바 --------------------------------- */
+
+
+.about{
+  text-align:center;
 }

@@ -123,16 +123,16 @@ p{
   max-width:1000px;
   height:70%;
   margin:auto;
-  border: 2px solid #0a5c0a;
   border-radius:10px;
-  background:white
+  background:white;
+  position:relative;
+  transform-style:preserve-3d;
 }
 
 .about-foward-upstairs{
   width:100%;
-  height:50%;
+  height:70%;
   display:flex;
-
   color:black;
   justify-content: center;
   align-items: center;
@@ -141,14 +141,27 @@ p{
 .privateInformation{
   text-align: left;
   margin-top:15px;
+  flex: 0.5;
+  
+}
+
+.privateImg{
+  width: "45%";
+  margin:30px;
+  flex: 0.5;
 }
 
 
 .about-foward{
-  width:90%;
-  height:80%;
+  width:100%;
+  height:100%;
   margin:auto;
+  position: absolute;
+  z-index: 5;
+  backface-visibility: hidden;
+ 
 }
+
 
 .about img{
   width:180px;
@@ -158,9 +171,58 @@ p{
 }
 
 
-.about-front{
-  
+.about-backward{
+  width:100%;
+  height:100%;
+  margin:auto;
+  position: absolute;
+  transform:rotateY(180deg);
+  backface-visibility: hidden;
+  color:black;
+  justify-content: center;
+  align-items: center;
+  background:#ffc107;
+  border-radius:10px;
+  opacity: 0.9;
 }
+
+.about-backward-items{
+  width:70%;
+  background:white;
+  height:20%;
+ 
+  border-radius: 10px;
+  margin-left:auto;
+  margin-right: auto;
+  margin-top:10px;
+ 
+}
+
+.about-icons{
+  margin-top:20px;
+  font-size:30px;
+  margin-left:auto;
+}
+
+.items-box{
+  width:50%;
+  height:100%;
+  display:inline-block;
+  text-align:left;
+  padding-left:50px;
+}
+
+
+.about-btn{
+  position:absolute;
+  right:50%;
+  left:50%;
+  bottom:1px;
+  transform:translate(-50%,-50%);
+   
+}
+
+
 
 /* about ------------------- */
 
@@ -175,28 +237,42 @@ p{
 @media screen and (max-width: 786px) {
   .about-foward-upstairs{
     display:block;
-
+    height:30%;
+   
   }
   .about-foward-upstairs p{
-    font-size:9px;
+    font-size:10px;
     margin:8px;
   } 
-
-  .privateInformation :first-child{
-    margin-top:80px;
+ 
+  .privateImg{
+    width: "70%";
+    height: "30%";
+    display: inline-block;
+    margin:0px;
   }
-
+ 
+  .privateInformation
+  {
+    margin-left:25%;
+    margin-right:25%;
+  
+  }
   .about-foward-upstairs img{
     border-radius: 10px;
     width:120px;
     height:120px;
+    margin-left:50%;
+    margin-right:50%;
+
   }
 
-  .about-foward-upstairs div{
-    margin-left:50px;
-    text-align: left;
-  }
 
+  .items-box{
+    width:90%;
+    padding-left:15px;
+    font-size:11px;
+  }
   
 
 }

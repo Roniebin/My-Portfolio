@@ -4,13 +4,20 @@ import Navigation from "./components/Navigation";
 import Intro from "./components/Intro";
 import { useState } from "react";
 import myinformation from "./data/data.json";
+import {faFire,faHandshake,faBatteryFull} from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+
 
 function App() {
-  let [myinfo, setMyinfo] = useState("");
-  myinfo=myinformation.info;
-  {
-    console.log(myinfo[0].name)
-  }
+  let [getinfo, setMyinfo] = useState("");
+  getinfo = myinformation.info[0];
+
+  let [rotationdeg, setRotationdeg] = useState(0);
+
+  let rotated = {
+    transform: `rotateY(${rotationdeg}deg) `,
+    transition: `transform 0.8s ease-in-out`,
+  };
 
   return (
     <div className="Main">
@@ -20,31 +27,65 @@ function App() {
       <div className="about">
         <h1>About me</h1>
         <h3>저는 이런 사람이에요.</h3>
-        <div className="about-container">
-          <div className="about-foward">
+        <div className="about-container" style={rotated}>
+          <div className="about-foward ">
             <h2 style={{ color: "black", margin: "0px", marginTop: "20px" }}>
-              - 인적사항 -
+              {" "}
+              - 인적사항 -{" "}
             </h2>
             <div className="about-foward-upstairs">
-              <div style={{ width: "50%", height: "50%" }}>
-                <img src="/images/증명사진.jpg"></img>
+              <div className="privateImg">
+                <img src="/images/증명사진.jpg" style={{marginLeft:"10px"}}></img>
               </div>
-              <div
-                className="privateInformation"
-                style={{ width: "50%", height: "50%" }}
-              >
-                <p>이름 : 송성빈</p>
-                <p>생년월일 : 2000.12.28</p>
-                <p>학력 : 동아대학교</p>
-                <p>email : 1923986@donga.ac.kr</p>
-                <p>주분야 : Publishing, Front-end</p>
+              <div className="privateInformation">
+                <Myinformation getinfo={getinfo} />
               </div>
             </div>
+
+            <button
+              className="btn about-btn"
+              onClick={() => {
+                setRotationdeg((rotationdeg) => rotationdeg + 180);
+              }}
+            >
+              더보기
+            </button>
           </div>
-          <button className="btn about-front">
-            Front
-            {/* 클릭시 뒷면에 나만의 키워드 자세하 4개 설명 */}
-          </button>
+
+          <div className="about-backward">
+          <h2>- 성격 카드 -</h2>
+              <div className="about-backward-items">
+                <div className="items-box">
+                <FontAwesomeIcon className="about-icons"icon={faFire} style={{color:"red"}} />
+                 <span style={{marginLeft:"10px"}}>언제나 열정적이에요!</span>
+                </div>
+
+              </div>
+              <div className="about-backward-items">
+                <div className="items-box">
+                  <FontAwesomeIcon className="about-icons" icon={faHandshake} style={{color:"orange"}}/>
+                  <span style={{marginLeft:"10px"}}>사교성이 좋아요!</span>
+                </div>
+             
+              </div>
+              <div className="about-backward-items">
+                <div className="items-box">
+                  <FontAwesomeIcon className="about-icons"icon={faBatteryFull} style={{color:"black"}}/>
+                  <span style={{marginLeft:"10px"}}>지치지 않아요!</span>
+                </div>
+             
+              </div>
+           
+
+          <button
+              className="btn about-btn"
+              onClick={() => {
+                setRotationdeg((rotationdeg) => rotationdeg + 180);
+              }}
+            >
+              돌아가기
+            </button>
+          </div>
         </div>
       </div>
 
@@ -53,8 +94,20 @@ function App() {
   );
 }
 
+
+
 function Myinformation(props) {
-  return <p></p>
+  return (
+    <span>
+      {Object.entries(props.getinfo).map((item, idx) => {
+        return (
+          <p key={idx} style={{marginLeft:"20px"}}>
+            {item[0]} : {item[1]}
+          </p>
+        );
+      })}
+    </span>
+  );
 }
 
 export default App;

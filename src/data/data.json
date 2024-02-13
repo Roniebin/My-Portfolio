@@ -1,10 +1,11 @@
 {
     "info" : [
         {
-        "name" : "Song Seong bin",
+        "이름" : "송성빈",
+        "생년월일" : "2000.12.28",
         "email" : "killpig00@naver.com",
-        "university" : "donga university",
-        "major" : "Publishing, Front-end"
+        "대학교" : "Donga university",
+        "주분야" : "Publishing, Front-end"
         }
     ]
 }

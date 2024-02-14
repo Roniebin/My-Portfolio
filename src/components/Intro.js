@@ -11,7 +11,7 @@ function Intro(props) {
 
   // 페이지 로딩되고 intro글 fade로
   useEffect(()=>{
-    setTimeout(()=>{ setFade('end') }, 100)
+    setTimeout(()=>{ setFade('end') }, 50)
 
    return ()=>{
     setFade('')

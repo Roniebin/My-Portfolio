@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import Navigation from "./components/Navigation";
 import Intro from "./components/Intro";
+import About from "./components/About";
 import { useState } from "react";
 import myinformation from "./data/data.json";
 import {faFire,faHandshake,faBatteryFull} from "@fortawesome/free-solid-svg-icons";
@@ -9,105 +10,61 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 
 function App() {
-  let [getinfo, setMyinfo] = useState("");
-  getinfo = myinformation.info[0];
-
-  let [rotationdeg, setRotationdeg] = useState(0);
-
-  let rotated = {
-    transform: `rotateY(${rotationdeg}deg) `,
-    transition: `transform 0.8s ease-in-out`,
-  };
+ 
 
   return (
     <div className="Main">
       <Navigation />
       <Intro />
+      <About />
 
-      <div className="about">
-        <h1>About me</h1>
-        <h3>저는 이런 사람이에요.</h3>
-        <div className="about-container" style={rotated}>
-          <div className="about-foward ">
-            <h2 style={{ color: "black", margin: "0px", marginTop: "20px" }}>
-              {" "}
-              - 인적사항 -{" "}
-            </h2>
-            <div className="about-foward-upstairs">
-              <div className="privateImg">
-                <img src="/images/증명사진.jpg" style={{marginLeft:"10px"}}></img>
+    
+      <div className="skills">
+        <div className="skills-container">
+            <h1>Skills</h1>
+              <div className="skills-frontend">
+                
+                <div className="fronted-boxes">
+                  <p style={{color:"orange"}}>많이 사용해봤어요</p>
+                  <p>HTML</p>
+                  <p>CSS</p>
+                  <p>Java Script</p>
+                </div>
+              
+                <div className="fronted-boxes">
+                    <p style={{color:"orange"}}>자주 써봤어요</p>
+                    <p>React</p>
+                    <p>NEXT.js</p>
+                    <p>React Query</p>
+                    <p>React-toolkit</p>
+                    <p>Boot strap</p>
+                </div>
+                
+                <div className="fronted-boxes">
+                    <p style={{color:"orange"}}>사용 경험이 있어요</p>
+                    <p>Jquery</p>
+                    <p>SCSS</p>
+    
+                </div>
               </div>
-              <div className="privateInformation">
-                <Myinformation getinfo={getinfo} />
+
+            <div style={{display:"flex",width:"70%",height:"100%"}}>
+              <div className="skills-backend">
+                csd
+              </div>
+              <div className="skills-version">
+                asdasas
               </div>
             </div>
 
-            <button
-              className="btn about-btn"
-              onClick={() => {
-                setRotationdeg((rotationdeg) => rotationdeg + 180);
-              }}
-            >
-              더보기
-            </button>
-          </div>
-
-          <div className="about-backward">
-          <h2>- 성격 카드 -</h2>
-              <div className="about-backward-items">
-                <div className="items-box">
-                <FontAwesomeIcon className="about-icons"icon={faFire} style={{color:"red"}} />
-                 <span style={{marginLeft:"10px"}}>언제나 열정적이에요!</span>
-                </div>
-
-              </div>
-              <div className="about-backward-items">
-                <div className="items-box">
-                  <FontAwesomeIcon className="about-icons" icon={faHandshake} style={{color:"orange"}}/>
-                  <span style={{marginLeft:"10px"}}>사교성이 좋아요!</span>
-                </div>
-             
-              </div>
-              <div className="about-backward-items">
-                <div className="items-box">
-                  <FontAwesomeIcon className="about-icons"icon={faBatteryFull} style={{color:"black"}}/>
-                  <span style={{marginLeft:"10px"}}>지치지 않아요!</span>
-                </div>
-             
-              </div>
-           
-
-          <button
-              className="btn about-btn"
-              onClick={() => {
-                setRotationdeg((rotationdeg) => rotationdeg + 180);
-              }}
-            >
-              돌아가기
-            </button>
-          </div>
+            <div>
+              {/* database */}
+            </div>
         </div>
       </div>
-
-      <div className="skills"></div>
     </div>
   );
 }
 
-
-
-function Myinformation(props) {
-  return (
-    <span>
-      {Object.entries(props.getinfo).map((item, idx) => {
-        return (
-          <p key={idx} style={{marginLeft:"20px"}}>
-            {item[0]} : {item[1]}
-          </p>
-        );
-      })}
-    </span>
-  );
-}
 
 export default App;

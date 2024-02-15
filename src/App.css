@@ -67,7 +67,7 @@ p{
 
 .intro{
   width:100%;
-  height:27%;
+  height:20%;
   display:flex;
   justify-content: center;
   align-items: center;
@@ -147,10 +147,8 @@ p{
 
 .privateImg{
   width: "45%";
-
   flex: 0.5;
 }
-
 
 .about-foward{
   width:100%;
@@ -159,9 +157,7 @@ p{
   position: absolute;
   z-index: 5;
   backface-visibility: hidden;
- 
 }
-
 
 .about img{
   width:180px;
@@ -169,7 +165,6 @@ p{
   border-radius:50%;
   margin-top:10px;
 }
-
 
 .about-backward{
   width:100%;
@@ -245,9 +240,9 @@ p{
 
 
 .skills-frontend{
-  width:60%;
+  width:50%;
   max-width:1000px;
-  height:100%;
+  height:90%;
   background:white;
   margin:auto;
   border-radius: 20px;
@@ -259,31 +254,101 @@ p{
 .fronted-boxes{
   width:30%;
   height:90%;
-  background-color: grey;
-  margin:20px;
+  margin-left:20px;
+  margin-right:20px;
   text-align: center;
 }
 
+.fronted-boxes p{
+  height:60%;
+}
+
+.skills-backend-container{
+  width:53%;
+  height:70%;
+}
+.skills-backend-bone{
+  width:49%;
+  background-color: white;
+  margin-top:50px;
+  text-align: center;;
+}
 
 .skills-backend{
-  width:30%;
-  height:30%;
-  background-color: white;
-  margin-left:auto;
-  margin-right:auto;
-  margin-top:30px;
+  height:72%;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px grey;
+
 }
 
 .skills-version{
-  width:30%;
-  height:30%;
-  background-color: white;
-  margin-left:auto;
-  margin-right:auto;
-  margin-top:30px;
+  height:72%;
+  margin-left:30px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px grey;
 }
 
+.skills-version p{
+  height: 30%;
+}
 
+.skills-database{
+  margin-top:30px;
+  height:60%;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px grey;
+}
+
+.skills-database p{
+  height: 40%;
+}
+
+.skills-android{
+  margin-top:30px;
+  margin-left:30px;
+  height:60%;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px grey;
+}
+
+.skills-android p{
+  height: 30%;
+}
+
+.skills-img1{
+  width:40%;
+  height:200px;
+}
+
+.skills-img2{
+  width:70%;
+  height:240px;
+}
+
+.skills-img3{
+  width:60%;
+  height:130px;
+}
+
+.skills-img4{
+  margin-top:5px;
+  width:25%;
+  height:80px;
+}
+.skills-img5{
+
+  width:30%;
+  height:50px;
+}
+
+.skills-img6{
+  width:50%;
+  height:120px;
+}
+.skills-img7{
+  width:30%;
+  height:35px;
+}
 /* skill --------------------- */
 
 
@@ -325,6 +390,84 @@ p{
     width:90%;
     padding-left:15px;
     font-size:11px;
+  }
+  .skills-frontend
+  {
+    height:57%;
+  }
+  
+  .skills-frontend :nth-child(2){
+    margin-left:0px;
+    margin-right:0px;
+  }
+  .skills-frontend img{
+    height:100%;
+  }
+
+  .skills-version
+  {
+    height:90%;
+  }
+
+  .skills-backend-container{
+    height:40%;
+  }
+
+  .skills-backend
+  {
+    height:90%;
+  }
+
+  .skills-frontend h3{
+    font-size:14px;
+  }
+
+  .skills-version h3{
+    font-size:14px;
+  }
+  .skills-backend h3{
+    font-size:14px;
+  }
+
+  .skills-backend p
+  {
+    margin-top:5px;
+  }
+  .skills-version p
+  {
+    margin-top:5px;
+  }
+  .skills-version img{
+    height:100%;
+  }
+
+  .skills-backend img{
+    height:100%;
+  }
+
+  .skills-database{
+    height:40%;
+    margin-top:60px;
+  }  
+  .skills-database img {
+    height:100%;
+
+  } 
+  .skills-database h3{
+    font-size:14px;
+  }
+
+  .skills-android{
+    height:40%;
+    margin-top:60px;
+  }  
+  
+  .skills-android h3{
+    font-size:14px;
+  }
+
+  .skills-android img {
+    height:28%;
   }
   
 

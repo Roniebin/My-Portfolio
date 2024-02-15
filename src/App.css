@@ -39,21 +39,37 @@ p{
 
 .navbar{
   width:100%;
-  max-width:1200px;
   height:50px;
   margin:auto;
   display:flex;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  z-index: 5;
+  box-shadow: 1px 1px 1px grey;
+  color:black
 }
 
 .navbar-items{
   width:10%;
   height:40%;
- 
   text-align:center;
 }
 
+
+.navbar-items span{
+  color:black;
+  transition:all 0.5s;;
+}
+
+.navbar-items span:hover{
+  color:purple;
+  
+}
 .logo{
   width:25%;
 }
@@ -114,7 +130,6 @@ p{
   background-size:cover;
   background-position: top center;
   color:white;
-
 }
 
 
@@ -185,7 +200,6 @@ p{
   width:70%;
   background:white;
   height:20%;
- 
   border-radius: 10px;
   margin-left:auto;
   margin-right: auto;
@@ -214,7 +228,6 @@ p{
   left:50%;
   bottom:1px;
   transform:translate(-50%,-50%);
-   
 }
 
 /* about ------------------- */
@@ -223,7 +236,7 @@ p{
 .skills{
   width:100%;
   height:1000px;
-  background-color:papayawhip;
+  background: linear-gradient(#e66465, #9198e5);
   padding:20px;
 }
 
@@ -231,11 +244,12 @@ p{
   width:100%;
   height:35%;
   margin:auto;
-
 }
 
 .skills h1{
   text-align: center;
+  margin-bottom:50px;
+  color:white;
 }
 
 
@@ -246,9 +260,12 @@ p{
   background:white;
   margin:auto;
   border-radius: 20px;
-  box-shadow: 5px 5px 5px grey;
   padding:20px;
   display:flex;
+}
+
+.lower:hover{
+  transform: translateY(5px )
 }
 
 .fronted-boxes{
@@ -264,6 +281,7 @@ p{
 }
 
 .skills-backend-container{
+  padding:5px;
   width:53%;
   height:70%;
 }
@@ -277,26 +295,25 @@ p{
 .skills-backend{
   height:72%;
   border-radius: 20px;
-  box-shadow: 5px 5px 5px grey;
-
 }
+
 
 .skills-version{
   height:72%;
   margin-left:30px;
   border-radius: 20px;
-  box-shadow: 5px 5px 5px grey;
 }
+
 
 .skills-version p{
   height: 30%;
+
 }
 
 .skills-database{
   margin-top:30px;
   height:60%;
   border-radius: 20px;
-  box-shadow: 5px 5px 5px grey;
 }
 
 .skills-database p{
@@ -308,7 +325,6 @@ p{
   margin-left:30px;
   height:60%;
   border-radius: 20px;
-  box-shadow: 5px 5px 5px grey;
 }
 
 .skills-android p{
@@ -349,10 +365,22 @@ p{
   width:30%;
   height:35px;
 }
+
+.hover{
+  box-shadow: 5px 5px 5px black;
+}
 /* skill --------------------- */
 
 
 @media screen and (max-width: 786px) {
+
+  .navbar-items{
+    width:20%;
+  }
+  
+  .navbar-items-blank{
+    width:20%;
+  }
   .about-foward-upstairs{
     display:block;
     height:30%;
@@ -382,7 +410,6 @@ p{
     height:120px;
     margin-left:50%;
     margin-right:50%;
-
   }
 
 
@@ -391,10 +418,7 @@ p{
     padding-left:15px;
     font-size:11px;
   }
-  .skills-frontend
-  {
-    height:57%;
-  }
+
   
   .skills-frontend :nth-child(2){
     margin-left:0px;
@@ -404,19 +428,10 @@ p{
     height:100%;
   }
 
-  .skills-version
-  {
-    height:90%;
+  .skills-frontend{
+    margin-top:40px;
   }
-
-  .skills-backend-container{
-    height:40%;
-  }
-
-  .skills-backend
-  {
-    height:90%;
-  }
+ 
 
   .skills-frontend h3{
     font-size:14px;
@@ -437,17 +452,13 @@ p{
   {
     margin-top:5px;
   }
-  .skills-version img{
-    height:100%;
-  }
-
+  .skills-version img, 
   .skills-backend img{
     height:100%;
   }
 
   .skills-database{
-    height:40%;
-    margin-top:60px;
+    margin-top:30px;
   }  
   .skills-database img {
     height:100%;
@@ -458,8 +469,7 @@ p{
   }
 
   .skills-android{
-    height:40%;
-    margin-top:60px;
+    margin-top:30px;
   }  
   
   .skills-android h3{

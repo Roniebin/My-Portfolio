@@ -2,7 +2,7 @@ import React from "react";
 import "../App.css";
 import { useState } from "react";
 import myinformation from "../data/data.json";
-import {faFire,faHandshake,faBatteryFull} from "@fortawesome/free-solid-svg-icons";
+import {faTag,faPen,faFire,faHandshake,faBatteryFull} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 
@@ -25,9 +25,11 @@ function About(props)
         <h3>저는 이런 사람이에요.</h3>
         <div className="about-container" style={rotated}>
           <div className="about-foward ">
+            
             <h2 style={{ color: "black", margin: "0px", marginTop: "20px" }}>
-              {" "}
-              - 인적사항 -{" "}
+              
+              <FontAwesomeIcon icon={faTag} style={{marginRight:"10px"}}/>인적사항
+              
             </h2>
             <div className="about-foward-upstairs">
               <div className="privateImg">
@@ -49,7 +51,7 @@ function About(props)
           </div>
 
           <div className="about-backward">
-          <h2>- 성격 카드 -</h2>
+          <h2><FontAwesomeIcon icon={faTag} style={{marginRight:"10px"}}/> 성격 카드</h2>
               <div className="about-backward-items">
                 <div className="items-box">
                 <FontAwesomeIcon className="about-icons"icon={faFire} style={{color:"red"}} />
@@ -95,7 +97,7 @@ function Myinformation(props) {
         {Object.entries(props.getinfo).map((item, idx) => {
           return (
             <p key={idx} style={{marginLeft:"20px"}}>
-              {item[0]} : {item[1]}
+              <FontAwesomeIcon icon={faPen} style={{marginRight:"10px"}}/> {item[0]} : {item[1]}
             </p>
           );
         })}

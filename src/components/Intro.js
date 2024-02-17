@@ -20,8 +20,10 @@ function Intro(props) {
 
   return (
     <div className="intro">
+      <div className="intro-container">
       <div className={'intro-box start '+fade}>
-            <h1>안녕하세요.</h1>
+         
+            <h1 className="title">Frontend-portfolio</h1>
             <h1>
             <span style={{color:"red"}}>"진취적인"</span>{" "}
             웹 개발자 송성빈입니다.
@@ -34,6 +36,7 @@ function Intro(props) {
 
         <hr></hr>
         <button className="btn">더 알아보기</button>
+      </div>
       </div>
     </div>
   );

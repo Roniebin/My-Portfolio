@@ -6,7 +6,9 @@
   font-style: normal;
 }
 
-
+div{
+  box-sizing: border-box;
+}
 p{
   font-weight:500;
 }
@@ -33,8 +35,6 @@ p{
 .Main{
   height:3000px;
   width:100%;
-  margin:auto;
-  box-sizing: border-box;
   font-family: "SOYOMapleBoldTTF";
 }
 
@@ -84,19 +84,20 @@ p{
 
 .intro{
   width:100%;
-  height:20%;
+  height:22%;
   display:flex;
   justify-content: center;
   align-items: center;
-  background:#FDF5E6;
-  color:#0a5c0a;
+  background-image: linear-gradient(270deg, white,#cfffe5);
+
   /* color:white; */
   /* 배경 출처 :출처 <a href="<a href="https://kr.freepik.com/free-photo/smooth-plain-white-marble-texture_18665597.htm#query=%EC%B1%85%EC%83%81&position=36&from_view=keyword&track=sph&uuid=7b130b0b-1497-4b96-9361-c54f4a60d9df">작가 rawpixel.com</a> 출처 Freepik */
-  background-image:url("./img/배경사진3.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  box-shadow: 1px 1px 1px grey;
+}
 
+.title{
+  color:#008080;
+  font-size:70px;
+  margin-bottom:60px;
 }
 
 .intro-box{
@@ -125,111 +126,78 @@ p{
   text-align:center;
   width:100%;
   height:600px;
+  box-shadow: 1px 1px 1px grey;
+}
+
+.about-background{
+  width:100%;
+  max-width:1300px;
+  height:100%;
   padding:20px;
-  background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("./img/배경사진2.jpg");
-  background-repeat: no-repeat;
-  background-size:cover;
-  background-position: top center;
-  color:white;
-}
-
-
-.about-container{
-  width:50%;
-  max-width:1000px;
-  height:70%;
-  margin:auto;
-  border-radius:10px;
-  background:white;
-  position:relative;
-  transform-style:preserve-3d;
-}
-
-.about-foward-upstairs{
-  width:100%;
-  height:70%;
   display:flex;
-  color:black;
   justify-content: center;
-  align-items: center;
-}
-
-.privateInformation{
-  text-align: left;
-  margin-top:15px;
-  flex: 0.5;
-  min-width:auto;
-}
-
-.privateImg{
-  width: "45%";
-  flex: 0.5;
-}
-
-.about-foward{
-  width:100%;
-  height:100%;
   margin:auto;
-  position: absolute;
-  z-index: 5;
-  backface-visibility: hidden;
+}
+.about-container1{
+ width:65%;
+ height:80%;
+ display:flex;
+
+ align-items: center;
 }
 
-.about img{
-  width:180px;
-  height:180px;
-  border-radius:50%;
-  margin-top:10px;
+.about-img{
+  width:40%;
+  height:auto;
 }
 
-.about-backward{
-  width:100%;
-  height:100%;
-  margin:auto;
-  position: absolute;
-  transform:rotateY(180deg);
-  backface-visibility: hidden;
-  color:black;
-  justify-content: center;
-  align-items: center;
-  background:#ffc107;
-  border-radius:10px;
+.about-information{
+  text-align:left;
+  font-size:20px;
+  
+}
+
+.about-informbox{
+  width:270px;
+  height:65px;
+  background-color: whitesmoke;
+  box-shadow: 3px 3px 3px grey;
+  border-radius: 5px;
+  margin-left:auto;;
+  margin-right:auto;
+  margin-bottom:30px;
+  font-size:12px;
+  text-align:left;
+  padding:15px;
+ 
+  background-image:linear-gradient(90deg,white, #CFFFE5);
+  transition: all 2s;
   opacity: 0.9;
 }
+.about-informbox:hover{
+  background-image:linear-gradient(90deg,white,#ffe1cf);
+  
+}
 
-.about-backward-items{
-  width:70%;
-  background:white;
-  height:20%;
-  border-radius: 10px;
-  margin-left:auto;
-  margin-right: auto;
-  margin-top:10px;
+.about-container2{
+ width:35%;
+ height:80%;
+ margin-left:30px;
+ 
+ border-left:2px solid black;
  
 }
 
-.about-icons{
-  margin-top:20px;
-  font-size:30px;
-  margin-left:auto;
+.about-container1-flex{
+  display:flex;
+
+}
+.mypic{
+  width:60%;
+  height:60%;
+  border-radius: 50%;
 }
 
-.items-box{
-  width:50%;
-  height:100%;
-  display:inline-block;
-  text-align:left;
-  padding-left:50px;
-}
-
-
-.about-btn{
-  position:absolute;
-  right:50%;
-  left:50%;
-  bottom:1px;
-  transform:translate(-50%,-50%);
-}
 
 /* about ------------------- */
 
@@ -237,146 +205,40 @@ p{
 .skills{
   width:100%;
   height:1000px;
-  background: Plum;
+ 
+  
   padding:20px;
 }
 
 .skills-container{
-  width:100%;
-  height:35%;
+  width:70%;
+  height:50%;
   margin:auto;
+  padding:20px;
+  background:white;
 }
 
 .skills h1{
   text-align: center;
   margin-bottom:50px;
-  color:white;
+  color:black;
+}
+
+.skills-fronted{
+  width:100%;
+  height:100%;
+
 }
 
 
-.skills-frontend{
-  width:50%;
-  max-width:1000px;
-  height:90%;
-  background:white;
-  margin:auto;
-  border-radius: 20px;
-  padding:20px;
-  display:flex;
-}
 
-.lower:hover{
-  transform: translateY(5px )
-}
-
-.fronted-boxes{
-  width:30%;
-  height:90%;
-  margin-left:20px;
-  margin-right:20px;
-  text-align: center;
-}
-
-.fronted-boxes p{
-  height:60%;
-}
-
-.skills-backend-container{
-  padding:5px;
-  width:53%;
-  height:70%;
-}
-.skills-backend-bone{
-  width:49%;
-  background-color: white;
-  margin-top:50px;
-  text-align: center;;
-}
-
-.skills-backend{
-  height:72%;
-  border-radius: 20px;
-}
-
-
-.skills-version{
-  height:72%;
-  margin-left:30px;
-  border-radius: 20px;
-}
-
-
-.skills-version p{
-  height: 30%;
-
-}
-
-.skills-database{
-  margin-top:30px;
-  height:60%;
-  border-radius: 20px;
-}
-
-.skills-database p{
-  height: 40%;
-}
-
-.skills-android{
-  margin-top:30px;
-  margin-left:30px;
-  height:60%;
-  border-radius: 20px;
-}
-
-.skills-android p{
-  height: 30%;
-}
-
-.skills-img1{
-  width:40%;
-  height:200px;
-}
-
-.skills-img2{
-  width:70%;
-  height:240px;
-}
-
-.skills-img3{
-  width:60%;
-  height:130px;
-}
-
-.skills-img4{
-  margin-top:5px;
-  width:25%;
-  height:80px;
-}
-.skills-img5{
-
-  width:30%;
-  height:50px;
-}
-
-.skills-img6{
-  width:50%;
-  height:120px;
-}
-.skills-img7{
-  width:30%;
-  height:35px;
-}
-
-.hover{
-  box-shadow: 5px 5px 5px black;
-}
 /* skill --------------------- */
 
 
 .projects{
   width:100%;
   height:2000px;
-  background:whitesmoke;
+  background-image: linear-gradient(270deg, #FFFF7F,#CFFFE5);
 
 }
 
@@ -457,43 +319,6 @@ p{
     font-size:11px;
   }
 
-  
-  .skills-frontend :nth-child(2){
-    margin-left:0px;
-    margin-right:0px;
-  }
-  .skills-frontend img, .skills-database img {
-    height:100%;
-  }
-
-  .skills-frontend{
-    margin-top:40px;
-  }
- 
-  .skills-version h3,   .skills-frontend h3,
-  .skills-backend h3,.skills-database h3
-  , .skills-android h3{
-    font-size:14px;
-  }
-  
-
-  .skills-backend p,  .skills-version p
-  {
-    margin-top:5px;
-  }
-  
-  .skills-version img, 
-  .skills-backend img{
-    height:100%;
-  }
-
-  .skills-database,.skills-android{
-    margin-top:30px;
-  }  
-
-  .skills-android img {
-    height:28%;
-  }
   
 
 }

@@ -71,7 +71,7 @@ function Project(props){
              <img src="/images/webpro.png"></img>
             </p>
           </div>
-          <div>----</div>
+          <br></br>
           <div className="projects-contents">
             <h2># Project 2 </h2>
             <br></br>

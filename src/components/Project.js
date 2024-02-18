@@ -6,7 +6,8 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 function Project(props){
     return (
         <div className="projects">
-        <h1 style={{ textAlign: "center" }}>Projects</h1>
+        <h1 style={{ textAlign: "center"}}>Projects</h1>
+        <br></br>
         <div className="projects-container">
           <div className="projects-contents">
             <h2># Project 1 </h2>
@@ -71,7 +72,7 @@ function Project(props){
              <img src="/images/webpro.png"></img>
             </p>
           </div>
-          <br></br>
+          <br></br><br></br>
           <div className="projects-contents">
             <h2># Project 2 </h2>
             <br></br>

@@ -7,14 +7,17 @@ import Skills from "./components/Skills";
 import Project from "./components/Project";
 
 function App() {
+ 
   return (
     <div className="Main">
+      
+     
       <Navigation />
       <Intro />
       <About />
       <Skills />
       <Project/>
-      <div className=""></div>
+      <div className="Archiving"></div>
     </div>
   );
 }

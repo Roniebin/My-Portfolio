@@ -5,7 +5,16 @@
   font-weight: 700;
   font-style: normal;
 }
+@font-face {
+  font-family: 'SejonghospitalBold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/SejonghospitalBold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
 
+h1,h2,h3,h4{
+  font-family: 'SejonghospitalBold';
+}
 div{
   box-sizing: border-box;
 }
@@ -13,26 +22,28 @@ p{
   font-weight:500;
 }
 
-.btn{
-  width:120px;
+.todown{
+  margin-top:100px;
+  background:#A03CB3;
+  width:40px;
   height:40px;
+  margin-left:auto;
+  margin-right:auto;
+  border-radius:50%;
   color:white;
-  border:none;
-  border-radius:20px;
-  background-color:#0a5c0a ;
-  color:white;
-  font-weight:600;
+  display:flex;
+  align-items: center;
+  justify-content: center;
 }
-
-.btn:hover{
-  opacity: 0.7;
-  cursor: pointer;
+.todown:hover{
+  cursor:pointer;
 }
 
 
 /* 기본 셋팅------------------------- */
 
 .Main{
+
   height:3000px;
   width:100%;
   font-family: "SOYOMapleBoldTTF";
@@ -65,11 +76,12 @@ p{
 .navbar-items span{
   color:black;
   transition:all 0.5s;;
+  
 }
 
 .navbar-items span:hover{
+  cursor:pointer;
   color:purple;
-  
 }
 .logo{
   width:25%;
@@ -88,16 +100,21 @@ p{
   display:flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(270deg, white,#cfffe5);
+ 
+  background:linear-gradient(360deg,white,#def7de);
 
   /* color:white; */
   /* 배경 출처 :출처 <a href="<a href="https://kr.freepik.com/free-photo/smooth-plain-white-marble-texture_18665597.htm#query=%EC%B1%85%EC%83%81&position=36&from_view=keyword&track=sph&uuid=7b130b0b-1497-4b96-9361-c54f4a60d9df">작가 rawpixel.com</a> 출처 Freepik */
 }
 
 .title{
-  color:#008080;
-  font-size:70px;
+  color:#009966;
+  font-size:50px;
   margin-bottom:60px;
+}
+
+.intro-container{
+  color:#009966;
 }
 
 .intro-box{
@@ -128,7 +145,9 @@ p{
   height:600px;
   box-shadow: 1px 1px 1px grey;
 }
-
+.about h1{
+  font-size:50px;
+}
 .about-background{
   width:100%;
   max-width:1300px;
@@ -204,32 +223,61 @@ p{
 
 .skills{
   width:100%;
-  height:1000px;
- 
-  
+  height:25%;
   padding:20px;
+
+  background:#1670f6;
 }
 
 .skills-container{
-  width:70%;
+  width:90%;
   height:50%;
-  margin:auto;
-  padding:20px;
-  background:white;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:30px;
+  display:flex;
 }
 
 .skills h1{
   text-align: center;
-  margin-bottom:50px;
-  color:black;
+  color:white;
+  font-size:50px;
 }
-
+.skills-title{
+  width:85%;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:140px;
+}
 .skills-fronted{
+  margin-top:40px;
   width:100%;
-  height:100%;
-
+  height:70%;
+  display: flex;
+  align-items: center;
 }
 
+
+.skills-boxes{
+    width:30%;
+    height:280px;
+    margin:20px;
+    margin-bottom:20px;
+    font-size:13px;
+    padding-top:5px;
+    padding-left:15px;
+    background-color: #467fd7;
+    color:white;
+    border-radius:10px;
+}
+
+.skills-boxes h3,.skills-boxes h4{
+  font-size:18px;
+}
+
+.skills-boxes p{
+  font-weight:200;
+}
 
 
 /* skill --------------------- */
@@ -237,9 +285,13 @@ p{
 
 .projects{
   width:100%;
-  height:2000px;
-  background-image: linear-gradient(270deg, #FFFF7F,#CFFFE5);
+  height:78%;
+  background:#f9c51d;
+  padding:30px;
+}
 
+.projects h1{
+  font-size:50px;
 }
 
 .projects-container{
@@ -319,6 +371,24 @@ p{
     font-size:11px;
   }
 
-  
+  .skills-fronted{
+    display:block;
+    margin-top:0px;
+  }
 
+  .skills-boxes{
+    width:80%;
+    height:40%;
+    height:auto;
+  }
+  .skills-title{
+    margin-top:0px;
+  }
+  .skills-container{
+    margin-top:0px;
+  }
+  
+  .skills h3,.skills h4{
+    margin:0px;
+  }
 }

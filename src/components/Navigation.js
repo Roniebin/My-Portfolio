@@ -20,7 +20,7 @@ function Navigation (props){
           }}>About</span></div>
           <div className="navbar-items"><span onClick={()=>{
              window.scrollTo({
-                top: 1250,
+                top: 1270,
                 behavior: 'smooth',
              });
           }}>Skills</span></div>
@@ -32,7 +32,7 @@ function Navigation (props){
           }}>Projects</span></div>
           <div className="navbar-items"><span onClick={()=>{
              window.scrollTo({
-                top: 600,
+                top:4000,
                 behavior: 'smooth',
              });
           }}>Archiving</span></div>

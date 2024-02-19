@@ -22,6 +22,7 @@ function About(props)
     return (
       
         <div className="about">
+          <br></br>
         <h1>About me</h1>
         <div className="about-background">
           <div className="about-container1">
@@ -51,7 +52,6 @@ function About(props)
       </div>
     )
 }
-
 
 
 function Myinformation(props) {

@@ -25,7 +25,7 @@ function Intro(props) {
     <div className="intro">
       <div className="intro-container">
       <div className={'intro-box start '+fade}>
-         
+      <br></br>
             <h1 className="title">안녕하세요 <FontAwesomeIcon icon={faLeaf} /></h1>
             <h1>
             <span style={{color:"#960b54"}}>"진취적인"</span>{" "}

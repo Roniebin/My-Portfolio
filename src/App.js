@@ -5,19 +5,18 @@ import Intro from "./components/Intro";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Project from "./components/Project";
+import Archiving from "./components/Archiving";
 
 function App() {
- 
   return (
     <div className="Main">
-      
-     
       <Navigation />
       <Intro />
       <About />
       <Skills />
-      <Project/>
-      <div className="Archiving"></div>
+      <Project />
+      <Archiving/>
+      
     </div>
   );
 }
